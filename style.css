@@ -1,0 +1,167 @@
+.b {
+font-family: 'Samsung Sans Bold';
+}
+details {
+  width: 100%;
+  margin: 0 auto ;
+  background: #d0cfcf;
+  margin-bottom: .5rem;
+  box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 1rem;
+  display: block;
+  background: #d0cfcf;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open] > summary:before {
+animation: sweep .5s ease-in-out;
+  transform: rotate(90deg);
+}
+#hello {
+  text-align: center;
+}
+a {
+  color: black;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+.parent {
+    height: 600px;
+    position: relative;
+  }
+  
+  .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input {
+    width: 100%;
+  }
+  form {
+    position: relative;
+    width: 30rem;
+    background: var(--color-brand);
+    border-radius: var(--rad);
+  }
+  input, button {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1.8rem;
+  }
+  input[type="search"] {
+    outline: 0; 
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none; 
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+  }
+  .ex {
+    font-size: 16px;
+  }
+  button {
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+  }
+  input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    + button {
+      display: block;
+    }
+  }
+  label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+body {
+    font-family: 'Samsung Sans Regular'; 
+}
+    @font-face {
+    font-family: 'Samsung Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sans Regular'), url('SamsungSans-Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Samsung Sans Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sans Thin'), url('SamsungSans-Thin.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Samsung Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sans Light'), url('SamsungSans-Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Samsung Sans Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sans Medium'), url('SamsungSans-Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Samsung Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samsung Sans Bold'), url('SamsungSans-Bold.woff') format('woff');
+    }
